@@ -39,12 +39,12 @@ Ver o projeto na nuvem (abra o navegador):
 - PATCH: Para fazer uma atualização parcial em um recurso.
 
 ### Códigos de retorno HTTP
-1) 200-299: Resposta de sucesso! <br>
-1.2) 200 OK: Esse requisição foi bem sucedida. O significado do sucesso varia de acordo com o método HTTP. <br>
-1.3) 201 Create: A requisição foi bem sucedidade e um novo recurso foi criado como resultado. Esta é uma típica resposta enviada após uma requisição POST. <br>
-1.4) 204 No Content: Não há conteúdo para enviar para esta solicitação. <br>
-2) 300-399: Redirecionamentos. <br>
-3) 400-499: Erros de cliente. <br>
-3.2) 400 Bad Request: O servidor não atendeu, pois está com uma sintaxe inválida. <br>
-3.3) Not Found: O servidor não pode encontrar o recurso solicitado. <br>
-4) 500-599: Erros de servidor. <br>
+- 200-299: Resposta de sucesso! <br>
+- 200 OK: Esse requisição foi bem sucedida. O significado do sucesso varia de acordo com o método HTTP. <br>
+- 201 Create: A requisição foi bem sucedidade e um novo recurso foi criado como resultado. Esta é uma típica resposta enviada após uma requisição POST. <br>
+- 204 No Content: Não há conteúdo para enviar para esta solicitação. <br>
+- 300-399: Redirecionamentos. <br>
+- 400-499: Erros de cliente. <br>
+- 400 Bad Request: O servidor não atendeu, pois está com uma sintaxe inválida. <br>
+- Not Found: O servidor não pode encontrar o recurso solicitado. <br>
+- 500-599: Erros de servidor. <br>
