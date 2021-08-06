@@ -1,6 +1,6 @@
 # Desenvolvendo uma API Profissional e Disponibilizando na Nuvem  
 - Nesse projeto eu desenvolvi uma API para controle de um estacionamento de veículos, a qual controla a entrada e saída de veículos. Os dados são cadastrados em um banco de dados relacional e essa API está exposta na nuvem, porém com controle de acesso. 
-- O cliente é o automóvel onde guarda alguns dados (placa, modelo e cor). Armazena a data e a hora de entrada para poder calcular o valor de saída. Há apenas um tipo de usuário no sistema que é o operador do estacionamento. 
+- Apliquei todas as boas práticas de desenvolvimento de API’s incluindo segurança com Spring Security e acesso a banco de dados PostgreSQL. Realizei testes e relatórios de cobertura de testes. Após finalizar a aplicação, fiz o deploy na cloud do Heroku a fim de disponibilizar nossa API para a Internet.
 
 ## Como eu desenvolvi esse projeto?
 ### Passo 1 
