@@ -9,4 +9,4 @@
 - Spring Boot: 2.4.0
 - Language: Java
 - Packaging: Jar
-- Dependencies: Spring Web
+- Dependencies: Spring Web, Spring Boot Dev Tools (faz a aplicação é atualizada no navegador automaticamente)
