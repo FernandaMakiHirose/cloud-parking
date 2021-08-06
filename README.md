@@ -24,4 +24,10 @@ Ver o projeto na nuvem (abra o navegador):
 - Selecionei a branch correta e fiz o deploy
 - Atenção: criei um arquivo `system.properties` e adicionei o código: `java.runtime.version=11` para o Heroku conseguir fazer o deploy
 
+## Conteúdo bônus
+### O que é REST?
+- REST é uma abreviação para representational state transfer, transferência do estado representacional. 
+- Ele é um modelo de arquitetura para sistemas distribuídos.
+- Quem o criou foi Roy Fielding, que também criou o HTTP. O REST é um modelo que pode ser usado na arquitetura de sistemas distribuídos.
+- REST utiliza o protocolo HTPP que além de utilizar recursos através de URIs, utiliza os verbos HTTP.
 
