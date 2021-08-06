@@ -37,3 +37,14 @@ Ver o projeto na nuvem (abra o navegador):
 - PUT: Para atualizar recursos existentes. 
 - DELETE: Para excluir recursos. 
 - PATCH: Para fazer uma atualização parcial em um recurso.
+
+### Códigos de retorno HTTP
+1) 200-299: Resposta de sucesso!
+1.2) 200 OK: Esse requisição foi bem sucedida. O significado do sucesso varia de acordo com o método HTTP.
+1.3) 201 Create: A requisição foi bem sucedidade e um novo recurso foi criado como resultado. Esta é uma típica resposta enviada após uma requisição POST.
+1.4) 204 No Content: Não há conteúdo para enviar para esta solicitação.
+2) 300-399: Redirecionamentos.
+3) 400-499: Erros de cliente.
+3.2) 400 Bad Request: O servidor não atendeu, pois está com uma sintaxe inválida. 
+3.3) Not Found: O servidor não pode encontrar o recurso solicitado.
+4) 500-599: Erros de servidor.
