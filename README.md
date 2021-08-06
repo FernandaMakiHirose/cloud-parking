@@ -3,8 +3,11 @@
 - Apliquei todas as boas práticas de desenvolvimento de API’s incluindo segurança com Spring Security e acesso a banco de dados PostgreSQL. Realizei testes e relatórios de cobertura de testes. Após finalizar a aplicação, fiz o deploy na cloud do Heroku a fim de disponibilizar nossa API para a Internet.
 
 ## Comandos
-Ver o projeto na nuvem (abra o navegador):
+Ver o projeto na raiz principal:
 >https://cloud-parking-fmh.herokuapp.com/ 
+
+Ver o Swagger: 
+>https://cloud-parking-fmh.herokuapp.com/swagger-ui.html# 
 
 ## Como eu desenvolvi esse projeto?
 ### Iniciando o projeto
@@ -23,6 +26,9 @@ Ver o projeto na nuvem (abra o navegador):
 - Cliquei em `Enable Automatic Deploys`
 - Selecionei a branch correta e fiz o deploy
 - Atenção: criei um arquivo `system.properties` e adicionei o código: `java.runtime.version=11` para o Heroku conseguir fazer o deploy
+
+## Configurar o Swagger
+Para configurar o Swagger (dependência adicionada no arquivo `pom.xml` 40 a 49)
 
 ## Conteúdo bônus
 ### O que é REST?
