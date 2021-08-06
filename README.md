@@ -31,3 +31,9 @@ Ver o projeto na nuvem (abra o navegador):
 - Quem o criou foi Roy Fielding, que também criou o HTTP. O REST é um modelo que pode ser usado na arquitetura de sistemas distribuídos.
 - REST utiliza o protocolo HTPP que além de utilizar recursos através de URIs, utiliza os verbos HTTP.
 
+### Verbos HTTP
+- GET: Para recuperar representação / informação de recursos apenas.
+- POST: Para criar novos recursos subordinados. 
+- PUT: Para atualizar recursos existentes. 
+- DELETE: Para excluir recursos. 
+- PATCH: Para fazer uma atualização parcial em um recurso.
