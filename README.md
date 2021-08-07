@@ -27,11 +27,15 @@ Ver o Swagger:
 - Selecionei a branch correta e fiz o deploy
 - Atenção: criei um arquivo `system.properties` e adicionei o código: `java.runtime.version=11` para o Heroku conseguir fazer o deploy
 
+## Segurança
+- Dependência adicionada no arquivo `pom.xml` da linha 70 a 73 (Spring Boot Starter Security)
+
 ## Configurar o Swagger (Documentação da API)
 Para configurar o Swagger (dependência adicionada no arquivo `pom.xml`, linha 40 a 49)
 
 ## Teste
 - Usei o Rest Assured para executar os testes (dependência adicionada no arquivo pom.xml, linha 74 a 78)
+- Usei o Test Containers para fazer os testes do banco de dados (dependência adicionada no arquivo pom.xml, linha 84 a 89)
 - Preparei a Entidade Parking
 - Iniciei o container no banco de dados
 - Configurei o Spring Data JPA
