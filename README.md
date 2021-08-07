@@ -3,10 +3,7 @@
 - Apliquei todas as boas práticas de desenvolvimento de API’s incluindo segurança com Spring Security e acesso a banco de dados PostgreSQL. Realizei testes e relatórios de cobertura de testes. Após finalizar a aplicação, fiz o deploy na cloud do Heroku a fim de disponibilizar nossa API para a Internet.
 
 ## Comandos
-Ver o projeto na raiz principal:
->https://cloud-parking-fmh.herokuapp.com/ 
-
-Ver o Swagger: 
+Ver a documentação da API: 
 >https://cloud-parking-fmh.herokuapp.com/swagger-ui.html# 
 
 ## Como eu desenvolvi esse projeto?
