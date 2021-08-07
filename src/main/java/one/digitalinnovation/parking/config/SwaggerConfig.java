@@ -20,15 +20,16 @@ import springfox.documentation.spi.service.contexts.SecurityContext;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
-@Component
-@EnableSwagger2
+@Component // indica que é um componente
+@EnableSwagger2 // habilita o swagger
 public class SwaggerConfig {
 
+    // deixa o projeto mais apresentável
     @Bean
     public Docket getDocket() {
-        return new Docket(DocumentationType.SWAGGER_2)
+        return new Docket(DocumentationType.SWAGGER_2) // é um documento do tipo swagger2
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("one.digitalinnovation.parking"))
+                .apis(RequestHandlerSelectors.basePackage("one.digitalinnovation.parking")) // busca esse valor no CloudParkingApplication
                 .build()
                 .apiInfo(metaData())
                 .securityContexts(Arrays.asList(actuatorSecurityContext()))

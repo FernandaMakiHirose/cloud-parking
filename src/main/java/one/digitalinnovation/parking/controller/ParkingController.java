@@ -21,60 +21,62 @@ import one.digitalinnovation.parking.controller.mapper.ParkingMapper;
 import one.digitalinnovation.parking.model.Parking;
 import one.digitalinnovation.parking.service.ParkingService;
 
-@RestController
-@RequestMapping("/parking")
-@Api(tags = "Parking Controller")
+@RestController // // faz a aplicação ler todos os métodos
+@RequestMapping("/parking") // o request vai fazer feito nesse path
+@Api(tags = "Parking Controller") // é o nome que vai aparecer no navegador de subtítulo
 public class ParkingController {
 
+    // cria as variáveis
     private final ParkingService parkingService;
     private final ParkingMapper parkingMapper;
 
+    // construtor
     public ParkingController(ParkingService parkingService, ParkingMapper parkingMapper) {
         this.parkingService = parkingService;
         this.parkingMapper = parkingMapper;
     }
 
-    @GetMapping
+
+    @GetMapping // requisição get
     @ApiOperation("Find all parkings")
-    public ResponseEntity<List<ParkingDTO>> findAll() {
-        List<Parking> parkingList = parkingService.findAll();
-        List<ParkingDTO> result = parkingMapper.toParkingDTOList(parkingList);
+    public ResponseEntity<List<ParkingDTO>> findAll() { // acha todos os parkings na lista
+        List<Parking> parkingList = parkingService.findAll(); // acha todos os parkings no service
+        List<ParkingDTO> result = parkingMapper.toParkingDTOList(parkingList); // transforma o parkingMapper em uma lista dto
+        return ResponseEntity.ok(result); // retorna a ação acima
+    }
+
+    @GetMapping("/{id}") // requisição get
+    public ResponseEntity<ParkingDTO> findById(@PathVariable String id) { // vai pegar o parking pelo id
+        Parking parking = parkingService.findById(id); // pega o parking do service pelo id
+        ParkingDTO result = parkingMapper.toParkingDTO(parking); // transforma o parkingMapper em dto
         return ResponseEntity.ok(result);
     }
 
-    @GetMapping("/{id}")
-    public ResponseEntity<ParkingDTO> findById(@PathVariable String id) {
-        Parking parking = parkingService.findById(id);
-        ParkingDTO result = parkingMapper.toParkingDTO(parking);
-        return ResponseEntity.ok(result);
+    @DeleteMapping("/{id}") // delete
+    public ResponseEntity delete(@PathVariable String id) { // ResponseEntity é vazio, porque o recurso não vai existir mais
+        parkingService.delete(id); // deleta o id
+        return ResponseEntity.noContent().build(); // retorna nenhum conteúdo que foi excluído
     }
 
-    @DeleteMapping("/{id}")
-    public ResponseEntity delete(@PathVariable String id) {
-        parkingService.delete(id);
-        return ResponseEntity.noContent().build();
+    @PostMapping // post
+    public ResponseEntity<ParkingDTO> create(@RequestBody ParkingCreateDTO dto) { // vai fazer o post
+        var parkingCreate = parkingMapper.toParkingCreate(dto); // cria o parkingMapper
+        var parking = parkingService.create(parkingCreate); // cria o parkingService
+        var result = parkingMapper.toParkingDTO(parking); // transforma o parkingMapper em dto
+        return ResponseEntity.status(HttpStatus.CREATED).body(result); // cria o corpo da requisição
     }
 
-    @PostMapping
-    public ResponseEntity<ParkingDTO> create(@RequestBody ParkingCreateDTO dto) {
-        var parkingCreate = parkingMapper.toParkingCreate(dto);
-        var parking = parkingService.create(parkingCreate);
-        var result = parkingMapper.toParkingDTO(parking);
-        return ResponseEntity.status(HttpStatus.CREATED).body(result);
-    }
-
-    @PutMapping("/{id}")
+    @PutMapping("/{id}") // put
     public ResponseEntity<ParkingDTO> update(@PathVariable String id, @RequestBody ParkingCreateDTO parkingCreteDTO) {
-        Parking parkingUpdate = parkingMapper.toParkingCreate(parkingCreteDTO);
-        Parking parking = parkingService.update(id, parkingUpdate);
-        return ResponseEntity.ok(parkingMapper.toParkingDTO(parking));
+        Parking parkingUpdate = parkingMapper.toParkingCreate(parkingCreteDTO); // cria o parkingMapper
+        Parking parking = parkingService.update(id, parkingUpdate); // faz update do service de um id
+        return ResponseEntity.ok(parkingMapper.toParkingDTO(parking)); // retorna o parking como ok
     }
 
-    @PostMapping("/{id}/exit")
-    public ResponseEntity<ParkingDTO> checkOut(@PathVariable String id) {
-        //TODO verificar se já não esta fechado e lançar exceção
-        Parking parking = parkingService.checkOut(id);
-        return ResponseEntity.ok(parkingMapper.toParkingDTO(parking));
+    @PostMapping("/{id}/exit") // post
+    public ResponseEntity<ParkingDTO> checkOut(@PathVariable String id) { // faz o checkout
+        Parking parking = parkingService.checkOut(id); // verifica se ja não está fechado e lanças uma exceção
+        return ResponseEntity.ok(parkingMapper.toParkingDTO(parking)); // retornar o parking como ok
     }
 
 }

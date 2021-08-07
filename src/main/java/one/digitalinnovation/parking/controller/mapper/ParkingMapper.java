@@ -10,11 +10,13 @@ import one.digitalinnovation.parking.controller.dto.ParkingCreateDTO;
 import one.digitalinnovation.parking.controller.dto.ParkingDTO;
 import one.digitalinnovation.parking.model.Parking;
 
-@Component
+@Component // é um componente do spring
 public class ParkingMapper {
 
+    // cria uma variável do ModelMapper, ele foi adicionado nas dependências no projeto
     private static final ModelMapper MODEL_MAPPER = new ModelMapper();
 
+    // converte um objeto da lista
     public ParkingDTO toParkingDTO(Parking parking) {
         return MODEL_MAPPER.map(parking, ParkingDTO.class);
     }

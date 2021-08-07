@@ -11,17 +11,21 @@ import org.springframework.http.MediaType;
 import io.restassured.RestAssured;
 import one.digitalinnovation.parking.controller.dto.ParkingCreateDTO;
 
+// a aplicação vai subir em uma porta aleatória
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class ParkingControllerTest extends AbstractContainerBase {
 
+    // mapeia a porta
     @LocalServerPort
     private int randomPort;
 
+    // configura a porta que vai fazer o teste
     @BeforeEach
     public void setUpTest() {
         RestAssured.port = randomPort;
     }
 
+    // quando fazer o FindAll vai checar o resultado, quando fazer um get no path especificado vai pegar o statusCode
     @Test
     void whenFindAllThenCheckResult() {
         RestAssured.given()
@@ -32,6 +36,7 @@ class ParkingControllerTest extends AbstractContainerBase {
                 .statusCode(HttpStatus.OK.value());
     }
 
+    // quando o check for criado
     @Test
     void whenCreateThenCheckIsCreated() {
         var createDTO = new ParkingCreateDTO();
@@ -40,6 +45,7 @@ class ParkingControllerTest extends AbstractContainerBase {
         createDTO.setModel("BRASILIA");
         createDTO.setState("SP");
 
+        // quando colocar um corpo DTO no .post vai retornar criar um HttpStatus e os valores passados
         RestAssured.given()
                 .when()
                 .auth().basic("user", "12345")

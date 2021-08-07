@@ -8,7 +8,7 @@ import springfox.documentation.annotations.ApiIgnore;
 
 @RestController // faz a aplicação ler todos os métodos
 @RequestMapping("/") // o request vai fazer feito nesse path
-@ApiIgnore
+@ApiIgnore // só vai mostrar as informações da api que estamos criando
 public class HelloController {
 
     // faz fazer uma requisição do tipo get que retorna essa frase

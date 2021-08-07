@@ -5,6 +5,9 @@ import java.time.LocalDateTime;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonInclude;
 
+// esse parking vai ser mostrado na tela do usuário
+
+// não vai incluir objetos que estão nulos
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class ParkingDTO {
 
