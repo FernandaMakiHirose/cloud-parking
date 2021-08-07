@@ -32,7 +32,7 @@ Para configurar o Swagger (dependência adicionada no arquivo `pom.xml`, linha 4
 
 ### Teste
 - Usei o Rest Assured para executar os testes (dependência adicionada no arquivo `pom.xml`, linha 74 a 78)
-- Usei o Test Containers para fazer os testes do banco de dados (dependência adicionada no arquivo pom.xml, linha 84 a 89)
+- Usei o Test Containers para fazer os testes do banco de dados (dependência adicionada no arquivo `pom.xml`, linha 84 a 89)
 - Preparei a Entidade Parking
 - Iniciei o container no banco de dados
 - Configurei o Spring Data JPA
