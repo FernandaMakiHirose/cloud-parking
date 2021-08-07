@@ -25,7 +25,7 @@ Ver a documentação da API:
 - Atenção: criei um arquivo `system.properties` e adicionei o código: `java.runtime.version=11` para o Heroku conseguir fazer o deploy
 
 ## Segurança
-- Dependência adicionada no arquivo `pom.xml` da linha 70 a 73 (Spring Boot Starter Security)
+Dependência adicionada no arquivo `pom.xml` da linha 70 a 73 (Spring Boot Starter Security)
 
 ## Configurar o Swagger (Documentação da API)
 Para configurar o Swagger (dependência adicionada no arquivo `pom.xml`, linha 40 a 49)
