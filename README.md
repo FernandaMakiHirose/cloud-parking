@@ -30,15 +30,15 @@ Ver o Swagger:
 ## Configurar o Swagger (Documentação da API)
 Para configurar o Swagger (dependência adicionada no arquivo `pom.xml` 40 a 49):
 `
-        <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger2</artifactId>
-            <version>${springfox-swagger.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger-ui</artifactId>
-            <version>${springfox-swagger.version}</version>
+        <dependency> <br>
+            <groupId>io.springfox</groupId> <br>
+            <artifactId>springfox-swagger2</artifactId> <br>
+            <version>${springfox-swagger.version}</version> <br>
+        </dependency> <br>
+        <dependency> <br>
+            <groupId>io.springfox</groupId> <br>
+            <artifactId>springfox-swagger-ui</artifactId> <br>
+            <version>${springfox-swagger.version}</version> <br>
         </dependency>
 `
 
